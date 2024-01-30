@@ -154,7 +154,11 @@ const developersData = [
 
     switch (page) {
       case "about":
-          mainContent.innerHTML = "<h1>About us</h1>";
+          mainContent.innerHTML = `
+          <h1>About us</h1>
+          <p>At Software Mentor, we're dedicated to fostering the growth and success of aspiring developers by connecting them with seasoned software engineering professionals. 
+          Whether you're embarking on your journey into programming development, seeking expert advice for crafting a standout resume, 
+          or honing your interview skills to land your dream job, we're here to guide you every step of the way</p>`;
           break; // Add break to exit the switch statement after setting content
       case "contact":
           mainContent.innerHTML = "<h1>Contact</h1>";

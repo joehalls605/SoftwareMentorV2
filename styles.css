@@ -8,6 +8,13 @@ body {
     align-items: flex-start;
     justify-content: space-between;
     flex-direction: row;
+    text-decoration: none;
+    color: black;
+}
+
+#header a {
+    text-decoration: none; /* Remove underline */
+    color: black; /* Set color to black */
 }
 
 #footer{
@@ -17,9 +24,10 @@ body {
     flex-direction: row;
 }
 
-
 h2 {
     margin: 0;
+    text-decoration: none; /* Remove underline */
+    color: black; /* Change color to black */
 }
 
 ul {
