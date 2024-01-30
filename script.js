@@ -75,7 +75,8 @@ const developersData = [
         developerDiv.classList.add("developer");
 
         developerDiv.innerHTML = 
-        `<h3>${developer.name}</h3>
+        `<div>
+        <h3>${developer.name}</h3>
         <p>${developer.bio}</p>
         <p>Skill: ${developer.programmingLanguage}</p>
         <p>Available: ${developer.available}</p>
