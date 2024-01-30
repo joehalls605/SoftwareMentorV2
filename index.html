@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Mentor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header">
+        <h2>Software Mentor</h2>
+        <ul>
+            <li><a href="#" onclick="showContent('about')">About</a></li>
+            <li><a href="#" onclick="showContent('contact')">Contact</a></li>
+        </ul>
+    </div>
+
+    <div id="main">
+        <div id="main-slogan">
+            <p>Your Gateway to Developer Mentorship.</p>
+        </div>           
+       <form id="filterForm">
+        <label for="mentorshipType">What type of mentorship are you looking for?</label>
+        <select id="mentorshipType">
+            <option value="Interview_coaching">Interview Coaching</option>
+            <option value="Resume_advice">Resume Advice</option>
+            <option value="Programming_development">Programming Development</option>
+        </select>
+        
+        <p>Mentor programming languages:</p>
+        <div id="programmingLanguageCheckboxesContainer">
+            <div>
+                <label for="Javascript">Javascript</label>
+                <input type="checkbox" id="Javascript">
+            </div>
+           <div>
+            <label for="Python">Python</label>
+            <input type="checkbox" id="Python">
+           </div>
+         <div>
+            <label for="C#">C#</label>
+            <input type="checkbox" id="C#">
+         </div>
+         <div>
+            <label for="Ruby">Ruby</label>
+            <input type="checkbox" id="Ruby">
+         </div>
+         <div>
+            <label for="PHP">PHP</label>
+            <input type="checkbox" id="PHP">
+         </div>
+         <div>
+            <label for="Swift">Swift</label>
+            <input type="checkbox" id="Swift">
+         </div>
+  
+           
+        </div>
+        <button type="button" onclick="filterDevelopers()">Apply Filters</button>
+       </form>
+       <div id="developers"></div>
+
+    </div>
+
+    <div id="footer">
+      <p></p>
+    </div>
+    <!-- Include the developersData.js file directly -->
+    <script src="script.js"></script>
+</body>
+</html>

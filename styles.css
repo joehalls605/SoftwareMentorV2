@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+#header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+h2 {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: inline;
+    margin-left: 10px;
+}
+
+#main {
+    max-width: 600px;
+    margin: auto;
+    text-align: right;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+#main-slogan{
+    text-align: left;
+}
+
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#developers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.developer {
+    width: 400px;
+    border: 1px solid #ccc;
+    border-width: 1px;
+    padding: 10px;
+    margin-bottom: 20px;
+    height: 500px;
+}
+
+.developer img {
+    width: 100%;
+    height: auto;
+}
+
+#programmingLanguageCheckboxesContainer {
+    display: none;
+  }
+
+  #programmingLanguageCheckboxesContainer.block {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
