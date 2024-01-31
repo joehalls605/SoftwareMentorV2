@@ -13,8 +13,10 @@ body {
 }
 
 #header a {
-    text-decoration: none; /* Remove underline */
-    color: black; /* Set color to black */
+    text-decoration: none; 
+    
+    color: black; 
+    
 }
 
 #footer{
@@ -26,8 +28,8 @@ body {
 
 h2 {
     margin: 0;
-    text-decoration: none; /* Remove underline */
-    color: black; /* Change color to black */
+    text-decoration: none; 
+    color: black; 
 }
 
 ul {
@@ -47,6 +49,10 @@ li {
     text-align: right;
 }
 
+.main-slogan {
+    margin: 0; 
+    text-align: left;
+}
 form {
     display: flex;
     align-items: center;
@@ -66,8 +72,9 @@ input, select, textarea {
     box-sizing: border-box;
 }
 
-#main-slogan{
+.main-slogan{
     text-align: left;
+    margin-top: 10px;
 }
 
 
@@ -86,13 +93,15 @@ button:hover {
 
 #developers {
     display: flex;
-    gap: 20px; /* Adjust gap if needed */
+    gap: 20px;
     flex-wrap: wrap;
     width: auto;
-  }
+    max-width: 1200px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+}
 
 .developer {
-  width: 39%; /* Set width to 1/3 of the container */
+  width: 39%; 
   border: 1px solid #ccc;
   text-align: left;
   padding: 10px;
@@ -108,8 +117,8 @@ button:hover {
 
 #programmingLanguageCheckboxesContainer {
     display: none;
-    width: 100%; /* Set width to 100% for full width */
-    box-sizing: border-box; /* Include padding and border in the width calculation */
+    width: 100%; 
+    box-sizing: border-box; 
 }
 
 
@@ -117,4 +126,27 @@ button:hover {
     display: flex;
     justify-content: center;
     gap: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    #developers {
+        justify-content: center; /* Align center on smaller screens */
+        margin: 0; /* Remove any existing margin */
+    }
+
+    .developer {
+        width: 100%; /* Set width to full on smaller screens */
+    }
+
+    .main-slogan {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    /* Apply left alignment to filter form elements */
+    #filterForm,
+    #filterForm label {
+        text-align: left;
+    }
 }

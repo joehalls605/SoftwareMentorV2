@@ -4,7 +4,7 @@ const developersData = [
     programmingLanguage: "Javascript",
     mentorshipType: "Programming_development",
     available: "Yes",
-    pricePerHour: 50,
+    pricePerHour: 100,
     image: "./images/AliceJames.jpg",
     bio: "I am Alice James, an experienced JavaScript developer with a passion for creating dynamic and responsive web applications..."
   },
@@ -93,6 +93,16 @@ const developersData = [
 
       const mentorshipType = document.getElementById("mentorshipType");
 
+      const budgetInput = document.getElementById("budget_input");
+      const budgetValue = parseInt(budgetInput.value);
+      budgetInput.addEventListener("keydown", function(event){
+        if(event.key === "Enter"){
+          filterDevelopers();
+        }
+      })
+      
+      console.log(budgetValue);
+
       if(mentorshipType.value === "Programming_development"){
         const programmingLanguageCheckboxesContainer = document.getElementById("programmingLanguageCheckboxesContainer");
         programmingLanguageCheckboxesContainer.classList.add("block");
@@ -103,11 +113,11 @@ const developersData = [
 
       const selectedLanguages = checkedCheckboxes.map(checkbox => checkbox.id);
     
-
       const filteredDevelopers = developersData.filter(developer => {
         return (
             (mentorshipType.value === '' || developer.mentorshipType.includes(mentorshipType.value)) &&
-            (selectedLanguages.length === 0 || selectedLanguages.includes(developer.programmingLanguage))
+            (selectedLanguages.length === 0 || selectedLanguages.includes(developer.programmingLanguage)) &&
+            (!budgetValue || developer.pricePerHour <= budgetValue) // JOE COME BACK TO THIS.
         );
     });
 
