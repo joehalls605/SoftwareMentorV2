@@ -138,65 +138,46 @@ const developersData = [
           const developerDiv = document.createElement("div");
           developerDiv.classList.add("developer");
   
-          developerDiv.innerHTML =
-              `<h3>${developer.name}</h3>
+          developerDiv.innerHTML = `
+              <h3>${developer.name}</h3>
               <p>${developer.bio}</p>
               <p>Skill: ${developer.programmingLanguage}</p>
               <p>Available: ${developer.available}</p>
               <p>From £${developer.pricePerHour}</p>
               <img src="${developer.image}">
-              `;
+          `;
+  
+          // Add click event listener to developerDiv
+          developerDiv.addEventListener("click", () => showDeveloperDetails(developer, developersWidget));
   
           developersWidget.appendChild(developerDiv);
       });
   }
-
-
-
-
-
-  // SHOW CONTENT
-
-  function showContent(page){
-    const mainContent = document.getElementById("main");
-
-    // clear existing content
-    mainContent.innerHTML = "";
-
-    switch (page) {
-      case "about":
-          mainContent.innerHTML = `
-          <h1>About us</h1>
-          <p>At Software Mentor, we're dedicated to fostering the growth and success of aspiring developers by connecting them with seasoned software engineering professionals. 
-          Whether you're embarking on your journey into programming development, seeking expert advice for crafting a standout resume, 
-          or honing your interview skills to land your dream job, we're here to guide you every step of the way</p>`;
-          break; // Add break to exit the switch statement after setting content
-      case "contact":
-          mainContent.innerHTML = "<h1>Contact</h1>";
-          break; // Add break to exit the switch statement after setting content
-      default:
-          break;
-  }
   
 
-    // Update the browser history to reflect the current page
-    /*
-window.history: The window.history object provides an interface to interact with the browser's session history.
-pushState: The pushState method is used to add a new state to the browser's history stack. It allows you to change the URL displayed in the browser without triggering a full page reload.
-{ page: page }: This represents the state object that is associated with the new history entry. In this case, it includes a property named "page" with a value equal to the page parameter passed to the function.
-null: The second argument represents the title of the new state. In this case, it's set to null because the title is not used in this scenario.
-#${page}: The third argument is the URL that will be displayed in the browser. It includes a hash symbol (#) followed by the value of the page parameter. This is often used in single-page applications to create bookmarkable URLs or to maintain navigation state.
-    */
-    window.history.pushState({ page: page }, null, `#${page}`);
-  }
+  //SHOWING  A SPECIFIC DEVELOPER.
 
-  window.addEventListener('popstate', function (event){
-    if(event.state && event.state.page){
-      showContent(event.state.page);
-    }
-  })
+function showDeveloperDetails(developer, developersWidget) {
+    // Clear existing content
+    developersWidget.innerHTML = "";
 
+    const developerDetailDiv = document.createElement("div");
+    developerDetailDiv.classList.add("developer-detail");
 
+    developerDetailDiv.innerHTML = `
+        <h3>${developer.name}</h3>
+        <p>${developer.bio}</p>
+        <p>Skill: ${developer.programmingLanguage}</p>
+        <p>Available: ${developer.available}</p>
+        <p>From £${developer.pricePerHour}</p>
+        <p>${developer.mentorshipType}</p>
+        <img src="${developer.image}">
+        <p>IM A DETAIL VERSION</p>
+    `;
+
+    // Append developerDetailDiv to developersWidget
+    developersWidget.appendChild(developerDetailDiv);
+}
 
 
     // CONTACT FORM SUBMIT

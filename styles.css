@@ -150,3 +150,18 @@ button:hover {
         text-align: left;
     }
 }
+
+.form-header{
+    margin-bottom: 20px;
+}
+
+input, select{
+    width: 40%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+#input-container {
+    margin-left: 20px; /* Adjust the left margin as needed */
+}

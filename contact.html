@@ -14,18 +14,25 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
-    <form action="#" method="post" id="skillSwapForm">
-        <label for="currentSkills">Current Skills:</label>
+
+    <form action="#" method="post" id="ContactForm">
+        <h3 class="form-header">How may we assist you?</h3>
+        <p>We're here to help with any questions or concerns you may have. Please don't hesitate to contact us.</p>
+        <label for="name">Name</label>
         <input type="text" id="currentSkills" name="currentSkills" required>
-        <label for="desiredSkills">Desired Skills:</label>
-        <input type="text" id="desiredSkills" name="desiredSkills" >
-        <label for="learningMethods">Learning Methods:</label>
+        <label for="email" type="email">Email</label>
+        <input type="text" id="contact topic" name="contact topic" >
+        <label for="contact topic">Topic</label>
         <select>
-            <option value="online">Online</option>
-            <option value="inPerson">In Person</option>
-            <option value="inPerson">Both</option>
+            <option value="online">Account</option>
+            <option value="inPerson">Buying on Software Mentor</option>
+            <option value="inPerson">Payments</option>
+            <option value="inPerson">Order management</option>
+            <option value="inPerson">Instructor Review</option>
+            <option value="inPerson">Terms & Conditions</option>
+            <option value="inPerson">Other</option>
         </select>
-        <label for="availability">Availability:</label>
+        <label for="availability">Your Message</label>
         <textarea id="availability" name="availability" rows="4"></textarea>
         <div id="notice"></div>
         <button id="submit" type="submit" onclick="submitForm()">Submit</button>
