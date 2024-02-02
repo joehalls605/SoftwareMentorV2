@@ -14,12 +14,10 @@ body {
 
 #header a {
     text-decoration: none; 
-    
     color: black; 
-    
 }
 
-#footer{
+#footer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,6 +51,7 @@ li {
     margin: 0; 
     text-align: left;
 }
+
 form {
     display: flex;
     align-items: center;
@@ -72,11 +71,10 @@ input, select, textarea {
     box-sizing: border-box;
 }
 
-.main-slogan{
+.main-slogan {
     text-align: left;
     margin-top: 10px;
 }
-
 
 button {
     background-color: #4CAF50;
@@ -96,46 +94,37 @@ button:hover {
     gap: 20px;
     flex-wrap: wrap;
     width: auto;
-    max-width: 1200px; /* Adjust the maximum width as needed */
-    margin: 0 auto; /* Center the container horizontally */
+    max-width: 1200px; 
+    margin: 0 auto; 
 }
 
 .developer {
-  width: 39%; 
-  border: 1px solid #ccc;
-  text-align: left;
-  padding: 10px;
-  margin: 15px;
+    width: 39%; 
+    border: 1px solid #ccc;
+    text-align: left;
+    padding: 10px;
+    margin: 15px;
 }
-
 
 .developer img {
     width: 100%;
     height: auto;
 }
 
-
 #programmingLanguageCheckboxesContainer {
-    display: none;
+    display: block;
     width: 100%; 
     box-sizing: border-box; 
 }
 
-
-  #programmingLanguageCheckboxesContainer.block {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
 @media only screen and (max-width: 600px) {
     #developers {
-        justify-content: center; /* Align center on smaller screens */
-        margin: 0; /* Remove any existing margin */
+        justify-content: center; 
+        margin: 0; 
     }
 
     .developer {
-        width: 100%; /* Set width to full on smaller screens */
+        width: 100%; 
     }
 
     .main-slogan {
@@ -144,24 +133,54 @@ button:hover {
         text-align: left;
     }
 
-    /* Apply left alignment to filter form elements */
+    
     #filterForm,
     #filterForm label {
         text-align: left;
     }
 }
 
-.form-header{
-    margin-bottom: 20px;
-}
-
-input, select{
+.form-left {
     width: 40%;
-    padding: 8px;
-    margin-bottom: 16px;
-    box-sizing: border-box;
+    margin-right: 20px;
 }
 
-#input-container {
-    margin-left: 20px; /* Adjust the left margin as needed */
+.form-right {
+    width: 40%;
+}
+
+#languagesLabel {
+    border-radius: 3px; 
+    font-size: small;
+    width: 450px; 
+    height: 10px;
+    padding: 4px;
+}
+
+#languagesContainer {
+    border: 1px solid #747474; 
+    border-radius: 3px; 
+    font-size: small;
+    width: 450px;
+    margin-bottom: 16px; 
+}
+
+#checkboxesContainer {
+    display: none;
+    font-size: small;
+    width: 100%; 
+}
+
+#checkboxesContainer.expanded {
+    display: block;
+    font-size: small;
+    width: 450px; 
+    padding: 3px;
+    margin: 5px;
+}
+
+#checkboxesContainer div {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 5px;
 }

@@ -89,6 +89,15 @@ const developersData = [
 
   // DEVELOPERS FILTER
 
+  document.addEventListener("DOMContentLoaded", function() {
+    const languagesLabel = document.getElementById("languagesLabel");
+    const checkboxesContainer = document.getElementById("checkboxesContainer");
+
+    languagesLabel.addEventListener("click", function() {
+        checkboxesContainer.classList.toggle("expanded");
+    });
+});
+
     function filterDevelopers(){
 
       const mentorshipType = document.getElementById("mentorshipType");
@@ -103,13 +112,15 @@ const developersData = [
       
       console.log(budgetValue);
 
-      if(mentorshipType.value === "Programming_development"){
-        const programmingLanguageCheckboxesContainer = document.getElementById("programmingLanguageCheckboxesContainer");
-        programmingLanguageCheckboxesContainer.classList.add("block");
-      }
+      // if(mentorshipType.value === "Programming_development"){
+      //   const programmingLanguageCheckboxesContainer = document.getElementById("programmingLanguageCheckboxesContainer");
+      //   programmingLanguageCheckboxesContainer.classList.add("block");
+      // }
 
       const checkboxes = document.querySelectorAll("#programmingLanguageCheckboxesContainer input[type='checkbox']");
-      const checkedCheckboxes = Array.from(checkboxes).filter(checkbox => checkbox.checked);
+      
+      
+     
 
       const selectedLanguages = checkedCheckboxes.map(checkbox => checkbox.id);
     
