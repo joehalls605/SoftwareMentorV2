@@ -92,9 +92,12 @@ const developersData = [
   document.addEventListener("DOMContentLoaded", function() {
     const languagesLabel = document.getElementById("languagesLabel");
     const checkboxesContainer = document.getElementById("checkboxesContainer");
+    const filterButton = document.getElementById("filterButton");
 
     languagesLabel.addEventListener("click", function() {
         checkboxesContainer.classList.toggle("expanded");
+        filterButton.classList.toggle("block");
+
     });
 });
 

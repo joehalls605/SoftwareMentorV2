@@ -91,11 +91,8 @@ button:hover {
 
 #developers {
     display: flex;
-    gap: 20px;
+    flex: start;
     flex-wrap: wrap;
-    width: auto;
-    max-width: 1200px; 
-    margin: 0 auto; 
 }
 
 .developer {
@@ -140,21 +137,35 @@ button:hover {
     }
 }
 
-.form-left {
-    width: 40%;
-    margin-right: 20px;
+#input-container {
+    display: flex;
+    justify-content: space-between;
+    justify-content: flex-start;
+    flex: wrap;
+    margin-left: 15px;
+    margin-top: 20px;
+    margin-bottom: 80px;
 }
 
-.form-right {
-    width: 40%;
+.column-one {
+    display: flex;
+    flex-direction: column;
 }
+
+.column-two {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start of the column */
+    margin-top: 20px; /* Add some margin to separate it from the above content */
+}
+
+
 
 #languagesLabel {
     border-radius: 3px; 
     font-size: small;
     width: 450px; 
     height: 10px;
-    padding: 4px;
 }
 
 #languagesContainer {
@@ -163,6 +174,9 @@ button:hover {
     font-size: small;
     width: 450px;
     margin-bottom: 16px; 
+    height: 32px;
+    margin-top: 7px;
+    margin-left: 30px;
 }
 
 #checkboxesContainer {
@@ -177,6 +191,7 @@ button:hover {
     width: 450px; 
     padding: 3px;
     margin: 5px;
+    background-color: white;
 }
 
 #checkboxesContainer div {
@@ -184,3 +199,13 @@ button:hover {
     align-items: center; 
     margin-bottom: 5px;
 }
+
+.filterButton{
+    margin-top: 30px;
+    margin-left: 30px;
+    display: block;
+}
+
+
+
+
