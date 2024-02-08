@@ -93,6 +93,7 @@ button:hover {
     display: flex;
     flex: start;
     flex-wrap: wrap;
+    transition: margin-top 0.1s;
 }
 
 .developer {
@@ -155,44 +156,45 @@ button:hover {
 .column-two {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align items to the start of the column */
-    margin-top: 20px; /* Add some margin to separate it from the above content */
+    align-items: flex-start; 
+    margin-top: 20px; 
 }
-
-
 
 #languagesLabel {
     border-radius: 3px; 
     font-size: small;
     width: 450px; 
-    height: 10px;
-}
-
-#languagesContainer {
-    border: 1px solid #747474; 
-    border-radius: 3px; 
-    font-size: small;
-    width: 450px;
-    margin-bottom: 16px; 
-    height: 32px;
-    margin-top: 7px;
-    margin-left: 30px;
+    height: 7px;
+    margin-left: 7px;
+    padding: 1px;
 }
 
 #checkboxesContainer {
     display: none;
     font-size: small;
-    width: 100%; 
+    width: 100%;
+    margin-left: 8px;
+    transition: max-height 0.5s;
 }
 
 #checkboxesContainer.expanded {
     display: block;
     font-size: small;
-    width: 450px; 
-    padding: 3px;
-    margin: 5px;
+    width: 450px;
     background-color: white;
-    border: 1px solid #747474; ;
+    margin-left: 1px;
+    max-height: 300px; 
+}
+
+#languagesContainer {
+    border: 1px solid #747474;
+    border-radius: 3px;
+    font-size: small;
+    width: auto; 
+    margin-bottom: 16px;
+    height: auto;
+    margin-top: 7px;
+    margin-left: 30px;
 }
 
 #checkboxesContainer div {
@@ -201,9 +203,16 @@ button:hover {
     margin-bottom: 5px;
 }
 
+#checkboxesContainer div:hover {
+    background-color: #007bff; /* Adjust the blue color as needed */
+    color: #fff;
+}
+
 #filterButton{
     margin-top: 30px;
-    margin-left: 30px;
+    margin-left: 40px;
+    width: 150px;
+    height: 60px;
     display: block;
 }
 

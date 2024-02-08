@@ -97,12 +97,16 @@ const developersData = [
     languagesLabel.addEventListener("click", function() {
         checkboxesContainer.classList.toggle("expanded");
 
-        if(filterButton.style.display === "none"){
-          filterButton.style.display = "block";
-        }
-        else{
-          filterButton.style.display = "none";
-        }
+        // if(filterButton.style.display === "none"){
+        //   filterButton.style.display = "block";
+          
+        // }
+        // else{
+        //   filterButton.style.display = "none";
+        // }
+
+        const developersContainer = document.getElementById("developers");
+        developersContainer.style.marginTop = "150px";
 
     });
 });
