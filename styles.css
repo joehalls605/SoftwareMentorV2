@@ -170,11 +170,24 @@ button:hover {
 }
 
 #checkboxesContainer {
+    display: flex;
+    flex-direction: column; /* Align checkboxes vertically */
+    align-items: flex-start; /* Align checkboxes to the start (left side) */
     display: none;
     font-size: small;
     width: 100%;
     margin-left: 8px;
     transition: max-height 0.5s;
+}
+
+#checkboxesContainer div {
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 5px; /* Add some spacing between checkboxes */
+}
+
+#checkboxesContainer label {
+    margin-right: 10px; /* Add some spacing between label and checkbox */
 }
 
 #checkboxesContainer.expanded {
@@ -183,7 +196,7 @@ button:hover {
     width: 450px;
     background-color: white;
     margin-left: 1px;
-    max-height: 300px; 
+    max-height: 400px; 
 }
 
 #languagesContainer {
@@ -197,11 +210,7 @@ button:hover {
     margin-left: 30px;
 }
 
-#checkboxesContainer div {
-    display: flex;
-    align-items: center; 
-    margin-bottom: 5px;
-}
+
 
 #checkboxesContainer div:hover {
     background-color: #007bff; /* Adjust the blue color as needed */
@@ -214,8 +223,12 @@ button:hover {
     width: 150px;
     height: 60px;
     display: block;
+    text-align: left;
 }
 
+#budget_input{
+    text-align: left;
+}
 
 
 

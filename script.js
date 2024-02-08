@@ -90,11 +90,10 @@ const developersData = [
   // DEVELOPERS FILTER
 
   document.addEventListener("DOMContentLoaded", function() {
-    const languagesLabel = document.getElementById("languagesLabel");
+    const languagesContainer = document.getElementById("languagesContainer");
     const checkboxesContainer = document.getElementById("checkboxesContainer");
-    const filterButton = document.getElementById("filterButton");
 
-    languagesLabel.addEventListener("click", function() {
+    languagesContainer.addEventListener("click", function() {
         checkboxesContainer.classList.toggle("expanded");
 
         // if(filterButton.style.display === "none"){
