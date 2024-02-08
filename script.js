@@ -96,7 +96,13 @@ const developersData = [
 
     languagesLabel.addEventListener("click", function() {
         checkboxesContainer.classList.toggle("expanded");
-        filterButton.classList.toggle("block");
+
+        if(filterButton.style.display === "none"){
+          filterButton.style.display = "block";
+        }
+        else{
+          filterButton.style.display = "none";
+        }
 
     });
 });

@@ -192,6 +192,7 @@ button:hover {
     padding: 3px;
     margin: 5px;
     background-color: white;
+    border: 1px solid #747474; ;
 }
 
 #checkboxesContainer div {
@@ -200,7 +201,7 @@ button:hover {
     margin-bottom: 5px;
 }
 
-.filterButton{
+#filterButton{
     margin-top: 30px;
     margin-left: 30px;
     display: block;
