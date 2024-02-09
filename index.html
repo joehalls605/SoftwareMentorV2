@@ -49,9 +49,17 @@
             <!-- Programming Languages Checkboxes -->
             <div class="column-two">
 
-                <label id="budget_input" for="budget_input">Hourly budget</label>
-                <input type="number" id="budget_input" placeholder="£20" value="">
+                <label class="filterFormTitle" for="mentorshipType">What type of mentorship are you looking for?</label>
 
+                <form id="filterForm">
+                    <!-- Mentorship Type Selection -->
+                    <select id="delivery-time">
+                        <option value="1">1 hr</option>
+                        <option value="8">8 hrs</option>
+                        <option value="24">24 hrs</option>
+                        <option value="48">48 hrs</option>
+                        <option value="null">Unlimited</option>
+                    </select>
 
 
                 <div id="languagesContainer">
